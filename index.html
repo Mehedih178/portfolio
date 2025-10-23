@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehedi Hassan | Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb", // blue-600
+            accent: "#0ea5e9",  // sky-500
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
+  <!-- 🌙 Toggle Dark Mode -->
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
+
+  <!-- 🔝 Navbar -->
+  <nav class="w-full fixed top-0 left-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <h1 class="font-bold text-xl text-primary">Mehedi Hassan</h1>
+      <ul class="flex gap-6 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-primary">Home</a></li>
+        <li><a href="about.html" class="hover:text-primary">About</a></li>
+        <li><a href="projects.html" class="hover:text-primary">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+      </ul>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-md border hover:bg-gray-200 dark:hover:bg-gray-800">
+        🌙
+      </button>
+    </div>
+  </nav>
+
+  <!-- 🦸 Hero Section -->
+  <section class="flex flex-col justify-center items-center text-center min-h-screen px-6 pt-20">
+    <h2 class="text-3xl sm:text-5xl font-bold mb-4">Hi, I’m <span class="text-primary">Mehedi Hassan</span> 👋</h2>
+    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
+      Computer Science Student @ <b>University at Buffalo</b> • Server Systems Analyst Intern @ <b>National Fuel</b>  
+      Passionate about IT Support, Cybersecurity, and System Administration.
+    </p>
+
+    <div class="flex gap-4 mt-8">
+      <a href="projects.html" class="px-6 py-3 bg-primary text-white rounded-lg shadow hover:bg-blue-700 transition">
+        View Projects
+      </a>
+      <a href="assets/images/Mehedi_Hassan_Resume.pdf" class="px-6 py-3 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+        View Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- 🧠 About Summary -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <h3 class="text-2xl font-semibold mb-6">About Me</h3>
+    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+      I’m a Computer Science student with hands-on experience in IT infrastructure, system monitoring, and
+      cybersecurity lab environments. I’ve worked with technologies like <b>Linux, Wireshark, NGINX, Proxmox, and auditd</b>.
+      My goal is to build secure, scalable systems that bridge technology and real-world impact.
+    </p>
+  </section>
+
+  <!-- 💻 Project Preview -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h3 class="text-2xl font-semibold text-center mb-10">Featured Projects</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project Card -->
+      <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2">DDoS Mitigation Demo</h4>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Configured NGINX with rate-limiting and upstream filtering to demonstrate real-world DDoS protection.
+        </p>
+        <a href="https://github.com/Mehedih178/Ddos-Project" target="_blank" class="text-primary text-sm font-semibold mt-3 inline-block">View on GitHub →</a>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2">Linux Auditd Lab</h4>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Implemented audit rules and analyzed event logs to detect unauthorized file modifications.
+        </p>
+        <a href="https://github.com/Mehedih178/lets-wget-this-bread" target="_blank" class="text-primary text-sm font-semibold mt-3 inline-block">View on GitHub →</a>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow hover:shadow-lg transition">
+        <h4 class="font-bold text-lg mb-2">📬 Business Email Compromise Investigation</h4>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Analyzed malicious `.pcap` captures in Wireshark to trace phishing payloads, attacker IPs, and SMTP anomalies.
+        </p>
+        <a href="https://github.com/Mehedih178/cyb102-bec-pcap-analysis" target="_blank" class="text-primary text-sm font-semibold mt-3 inline-block">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 Footer -->
+  <footer class="bg-gray-100 dark:bg-gray-900 py-6 mt-16">
+    <div class="max-w-5xl mx-auto text-center text-gray-500 dark:text-gray-400 text-sm">
+      <p>© 2025 Mehedi Hassan. All rights reserved.</p>
+      <div class="flex justify-center gap-6 mt-3">
+        <a href="https://github.com/Mehedih178" target="_blank" class="hover:text-primary">GitHub</a>
+        <a href="https://linkedin.com/in/mehedih178" target="_blank" class="hover:text-primary">LinkedIn</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
